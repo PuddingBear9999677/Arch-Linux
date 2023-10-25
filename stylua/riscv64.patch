@@ -1,0 +1,22 @@
+diff --git PKGBUILD PKGBUILD
+index b08aa0f..d9fdb09 100644
+--- PKGBUILD
++++ PKGBUILD
+@@ -6,7 +6,7 @@ pkgname=stylua
+ pkgver=0.18.2
+ pkgrel=1
+ pkgdesc='Code formatter for Lua'
+-arch=('x86_64')
++arch=(riscv64 x86_64)
+ url=https://github.com/JohnnyMorganz/StyLua
+ license=('MPL2')
+ depends=('gcc-libs')
+@@ -16,7 +16,7 @@ b2sums=('SKIP')
+ 
+ prepare() {
+   cd $_name
+-  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
++  cargo fetch --locked --target
+ }
+ 
+ build() {
